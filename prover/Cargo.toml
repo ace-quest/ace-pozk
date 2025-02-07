@@ -1,0 +1,30 @@
+[package]
+name = "prover"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+uzkge = { git = "https://github.com/zypher-game/uzkge.git", branch = "zkholdem" }
+zshuffle = { git = "https://github.com/zypher-game/uzkge.git", branch = "zkholdem" }
+ethabi = "18.0"
+hex = "0.4"
+rand_chacha = "0.3"
+reqwest = "0.12"
+tokio = { version = "1", features = ["full"] }
+
+ark-ff = { version = "0.4", default-features = false }
+ark-ec = { version = "0.4", default-features = false }
+ark-ed-on-bn254 = { version = "0.4", default-features = false, features = ["r1cs"] }
+ark-serialize = { version = "0.4", default-features = false }
+
+[patch.crates-io]
+ark-ff = { git = "https://github.com/arkworks-rs/algebra", rev = "065cd24" }
+ark-ec = { git = "https://github.com/arkworks-rs/algebra", rev = "065cd24" }
+ark-poly = { git = "https://github.com/arkworks-rs/algebra", rev = "065cd24" }
+ark-serialize = { git = "https://github.com/arkworks-rs/algebra", rev = "065cd24" }
+ark-bn254 = { git = "https://github.com/arkworks-rs/algebra", rev = "065cd24" }
+ark-ed-on-bn254 = { git = "https://github.com/arkworks-rs/algebra", rev = "065cd24" }
+ark-groth16 = { git = "https://github.com/arkworks-rs/groth16", rev = "8e5c347"  }
+ark-r1cs-std = { git = "https://github.com/arkworks-rs/r1cs-std", rev = "4020fbc" }
+ark-relations = { git = "https://github.com/arkworks-rs/snark", rev = "0759f94" }
+ark-std = { git = "https://github.com/arkworks-rs/std", rev = "e18cd56" }
