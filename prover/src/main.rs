@@ -143,7 +143,7 @@ async fn main() {
         Token::Bytes(proof.to_bytes_be()),
     ]);
 
-    std::fs::write("../test/test_proof", format!("0x{}", hex::encode(&bytes))).unwrap();
+    // std::fs::write("../test/test_proof", format!("0x{}", hex::encode(&bytes))).unwrap();
 
     let client = reqwest::Client::new();
     client.post(&input_path).body(bytes).send().await.unwrap();
